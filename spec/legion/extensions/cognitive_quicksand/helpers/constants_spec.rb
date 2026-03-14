@@ -6,7 +6,7 @@ RSpec.describe Legion::Extensions::CognitiveQuicksand::Helpers::Constants do
   describe 'TRAP_TYPES' do
     it 'contains expected types' do
       expect(described_class::TRAP_TYPES).to eq(%i[overthinking rumination analysis_paralysis
-                                                    perfectionism indecision])
+                                                   perfectionism indecision])
     end
 
     it 'is frozen' do

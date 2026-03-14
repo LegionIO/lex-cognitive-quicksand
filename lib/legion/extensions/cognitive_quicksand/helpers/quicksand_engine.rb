@@ -58,11 +58,11 @@ module Legion
           end
 
           def sink_all!
-            @traps.each_value { |t| t.sink! }
+            @traps.each_value(&:sink!)
           end
 
           def calm_all!
-            @traps.each_value { |t| t.calm! }
+            @traps.each_value(&:calm!)
           end
 
           def traps_by_type
@@ -99,13 +99,13 @@ module Legion
 
           def quicksand_report
             {
-              total_traps:    @traps.size,
-              total_pits:     @pits.size,
-              by_type:        traps_by_type,
-              submerged:      submerged_traps.size,
-              stuck:          stuck_traps.size,
-              avg_depth:      avg_depth,
-              deadly_pits:    @pits.values.count(&:deadly?)
+              total_traps: @traps.size,
+              total_pits:  @pits.size,
+              by_type:     traps_by_type,
+              submerged:   submerged_traps.size,
+              stuck:       stuck_traps.size,
+              avg_depth:   avg_depth,
+              deadly_pits: @pits.values.count(&:deadly?)
             }
           end
 

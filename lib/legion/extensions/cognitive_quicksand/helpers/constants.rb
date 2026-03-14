@@ -15,7 +15,7 @@ module Legion
           SINK_RATE     = 0.08
           STRUGGLE_PENALTY = 0.12
           ESCAPE_THRESHOLD = 0.3
-          CALM_RATE     = 0.03
+          CALM_RATE = 0.03
 
           DEPTH_LABELS = [
             [(0.8..),      :submerged],
